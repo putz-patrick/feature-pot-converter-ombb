@@ -11,11 +11,7 @@ namespace feature_pot_converter_ombb
 
         private static string MatchBinaryLength(string binary, int length)
         {
-            while (binary.Length < length)
-            {
-                binary = "0" + binary;
-            }
-            return binary;
+            return binary.PadLeft(length, '0');
         }
 
         private static string ConvertReelsToBinary(int reel1, int reel2, int reel3, int reel4, int reel5, int reel6, int length)
